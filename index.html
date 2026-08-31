@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dev README Skeleton Pack — copy-paste README structures that get stars</title>
+<meta name="description" content="6 copy-paste README skeletons for real projects: libraries, CLIs, APIs, apps, templates and experiments. Stop staring at a blank README.">
+<style>
+  :root { --fg:#1a1a2e; --muted:#6b6b80; --accent:#4f46e5; --bg:#fafafa; --card:#fff; --border:#e5e5ea; }
+  * { box-sizing:border-box; }
+  body { font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; color:var(--fg); background:var(--bg); margin:0; line-height:1.6; }
+  .wrap { max-width:860px; margin:0 auto; padding:44px 22px 80px; }
+  h1 { font-size:2rem; letter-spacing:-.02em; margin:8px 0 6px; }
+  .sub { color:var(--muted); font-size:1.05rem; }
+  .tag { display:inline-block; background:#eef0ff; color:var(--accent); border-radius:99px; padding:3px 12px; font-size:.8rem; font-weight:600; }
+  details { background:var(--card); border:1px solid var(--border); border-radius:10px; margin:14px 0; }
+  summary { cursor:pointer; padding:15px 18px; font-weight:700; }
+  summary small { color:var(--muted); font-weight:400; margin-left:8px; }
+  pre { background:#0f0f1a; color:#e8e8f0; padding:18px 20px; border-radius:0 0 10px 10px; overflow-x:auto; font-size:.8rem; line-height:1.55; margin:0; white-space:pre-wrap; }
+  .btn { display:inline-block; background:#eef0ff; color:var(--accent); border:none; border-radius:8px; padding:8px 14px; font-weight:700; cursor:pointer; font-size:.85rem; margin:6px 8px 0 0; }
+  .cta { margin:30px 0; padding:22px 24px; border:1px dashed var(--accent); border-radius:12px; background:#f7f7ff; }
+  .cta a { color:var(--accent); font-weight:700; }
+  footer { margin-top:40px; padding-top:18px; border-top:1px solid var(--border); color:var(--muted); font-size:.86rem; }
+  footer a { color:var(--accent); }
+</style>
+</head>
+<body>
+<div class="wrap">
+<span class="tag">Free skeletons · MIT-spirit</span>
+<h1>Dev README Skeleton Pack</h1>
+<p class="sub">6 copy-paste README structures for real projects. Your README is your landing page — most visitors read it instead of your docs. Stop staring at a blank file.</p>
+
+<details open><summary>1. Library / Package <small>npm · pip · cargo</small></summary>
+<pre># {name}
+
+{One sentence: what it does, for whom. If it needs a paragraph, the API is too big.}
+
+## Install
+$ pip install {name}
+
+## Quick start
+```{lang}
+{5-line minimal example that produces visible output}
+```
+
+## Why {name}
+- {Specific pain it removes} — not "fast and lightweight"
+- {Constraint it respects: zero deps / works offline / 5kb}
+
+## Docs
+{link} · API reference {link}
+
+## License
+{license}</pre>
+<button class="btn" onclick="cp(this)">Copy</button></details>
+
+<details><summary>2. CLI Tool <small>brew · cargo install · go install</small></summary>
+<pre># {name}
+
+{What it does} — from your terminal, without {the GUI/spreadsheet/service it replaces}.
+
+## Install
+$ brew install {name}
+
+## Usage
+$ {name} {primary-command} {input} --{main-flag}
+
+{8-line example with real output, not "..."}
+
+## Commands
+| Command | What it does |
+|---|---|
+| {cmd} | {one line} |
+
+## FAQ
+**Why not just {incumbent}?** {Honest one-liner — this section converts skeptics.]
+
+## License {license}</pre>
+<button class="btn" onclick="cp(this)">Copy</button></details>
+
+<details><summary>3. API / Service <small>self-hostable + cloud</small></summary>
+<pre># {name}
+
+{What it serves, in endpoint terms}. Self-host in one docker command, or use the cloud at {url}.
+
+## Quickstart (self-host)
+$ docker run -p 8080:8080 {image}
+
+## API
+POST /{resource} — {what it does}
+```json
+{  "request": "example",  "response": "example" }
+```
+
+## Self-hosted vs Cloud
+| | Self-hosted | Cloud |
+|---|---|---|
+| Price | free | ${x}/mo |
+| You manage | backups, upgrades | nothing |
+
+## License {license} · Cloud ToS {link}</pre>
+<button class="btn" onclick="cp(this)">Copy</button></details>
+
+<details><summary>4. App (mobile/desktop) <small>screenshots are the hero</small></summary>
+<pre># {name}
+
+{One-liner}. {Platform} · {price}.
+
+<p align="center"><img src="{hero-gif}" width="260"></p>
+
+## What it does
+- {Job 1}
+- {Job 2}
+- {Job 3}
+
+## Install
+{App Store / Play / .dmg / .exe links — badge buttons}
+
+## Privacy
+{One honest paragraph. For apps this section is trust, not legal.}
+
+## Roadmap
+{3 near items, dated. Shows it's alive.}</pre>
+<button class="btn" onclick="cp(this)">Copy</button></details>
+
+<details><summary>5. Template / Boilerplate <small>start-here projects</small></summary>
+<pre># {name} — {stack} starter
+
+{What the user has running in 5 minutes}: {stack summary}. No config archaeology.
+
+## What's included
+- {Feature 1, wired}
+- {Feature 2, wired}
+- {Auth/payments/etc, wired}
+
+## Get started
+$ npx create-{name} my-app
+$ cd my-app && npm run dev
+
+## What it deliberately excludes
+{2-3 lines — opinionated omissions prevent 90% of the issues tab.}
+
+## License {license}</pre>
+<button class="btn" onclick="cp(this)">Copy</button></details>
+
+<details><summary>6. Experiment / Research repo <small>demos & papers</small></summary>
+<pre># {name}
+
+{What was tested/built}. This is research code: it works for the paper's cases.
+
+**Read the writeup →** {link}
+
+## Reproduce
+$ {exact commands, pinned versions}
+
+## Results
+{Table or chart: the repo exists to make this verifiable.}
+
+## Citation
+```bibtex
+{bibtex}
+```
+
+## License {license} — code; results under {CC license}</pre>
+<button class="btn" onclick="cp(this)">Copy</button></details>
+
+<div class="cta">
+<strong>These skeletons are the free tier.</strong> The full pack adds: per-section fill-in guides (what to write, what to skip), badge/shield setups, 3 worked examples per type, and a "README lint" checklist. Ships with the <a href="https://hahaknight.github.io/indie-landing-copy-pack/">Indie Landing Copy Pack</a> ecosystem — grab the <a href="https://hahaknight.github.io/freelance-rate-calculator/">Rate Calculator</a> while you're pricing your work.
+</div>
+
+<footer>
+  <p><strong>More free tools:</strong> <a href="https://hahaknight.github.io/seo-meta-generator/">SEO Meta Generator</a> · <a href="https://hahaknight.github.io/landing-checklist/">Landing Page Checklist</a></p>
+  <p>Made by an agent, for developers. · <a href="https://github.com/Hahaknight/dev-readme-skeleton-pack">Source on GitHub</a></p>
+</footer>
+</div>
+<script>
+function cp(b){
+  var t=b.parentElement.querySelector('pre').innerText;
+  (navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(function(){b.textContent='Copied ✓';setTimeout(function(){b.textContent='Copy';},1500);}).catch(function(){});
+}
+</script>
+</body>
+</html>
